@@ -1,0 +1,99 @@
+This project is done by Eman Saleh, No Partner.
+
+Tree is empty.
+50 is inserted
+40 is inserted
+5 is inserted
+60 is inserted
+45 is inserted
+80 is inserted
+55 is inserted
+3 is inserted
+100 is inserted
+LevelOrder Print:
+
+                  50 
+                40 60 
+              5 45 55 80 
+            3 - - - - - - 100 
+20 is inserted
+10 is inserted
+70 is inserted
+90 is inserted
+44 is inserted
+Calling GetLength
+Number of nodes is 14
+LevelOrder Print:
+
+                            50 
+                          40 60 
+                       5 45 55 80 
+                     3 20 44 - - - 70 100 
+                   - - 10 - - -   - - 90 -
+Printing the tree...InOrder Traversal
+3  5  10  20  40  44  45  50  55  60  70  80  90  100  
+PreOrder Print:
+50  40  5  3  20  10  45  44  60  55  80  70  100  90  
+PostOrder Print:
+3  10  20  5  44  45  40  55  70  90  100  80 60  50
+Tree is not full.
+Tree is not empty.
+999 is not in tree.
+13 is not in tree.
+5 found in tree.
+Calling GetLength
+Number of nodes is 14
+Tree is not empty.
+Logical successor of 3 is: NULL
+-99999
+Logical successor of 10 is: NULL
+-99999
+Logical successor of 4 is: Item is not in the tree
+-99999
+Logical successor of 50 is: 55
+testing Ancestors of 3
+50  40  5  
+testing Ancestors of 4
+4 is not in the tree
+testing Ancestors of 50
+50 is the root value, No ancestor
+Testing Mirror Image
+
+Original Tree before mirroring:
+
+              10 
+            5  13 
+          4 7 12 20 
+Original Tree After Mirroring:
+
+             10 
+            5 13 
+          4 7 12 20 
+Mirror Image:
+
+              10 
+            13 5 
+          20 12 7 4 
+90 is not in tree
+3 is not in tree
+100 is not in tree
+Printing the tree...InOrder Traversal
+4  5  7  10  12  13  20  
+99 is not in tree
+50 is not in tree
+Calling GetLength
+Number of nodes is 6
+Printing the tree...InOrder Traversal
+4  7  10  12  13  20  
+Tree has been made empty.
+Tree is empty.
+balancedTree.LevelOrderPrint()
+
+                    50 
+                  20 80 
+                10 30 60 90 
+              - - - 40 - 70 - 100 
+balancedTree.InOrderPrint()
+10  20  30  40  50  60  70  80  90  100
+Undefined Command!PrintTree
+Undefined Command!Error

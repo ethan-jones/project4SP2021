@@ -1,0 +1,52 @@
+IsEmpty
+PutItem 50
+PutItem 40
+PutItem 5
+PutItem 60
+PutItem 45
+PutItem 80
+PutItem 55
+PutItem 3
+PutItem 100
+LevelOrderPrint
+PutItem 20
+PutItem 10
+PutItem 70
+PutItem 90
+PutItem 44
+GetLength
+LevelOrderPrint
+Print
+PreOrderPrint
+PostOrderPrint
+IsFull
+IsEmpty
+GetItem 999
+GetItem 13
+GetItem 5
+GetLength
+IsEmpty
+GetSuccessor 3
+GetSuccessor 10
+GetSuccessor 4
+GetSuccessor 50
+PrintAncestorsOf 3
+PrintAncestorsOf 4
+PrintAncestorsOf 50
+MirrorImage
+DeleteItem 90
+DeleteItem 3
+DeleteItem 100
+Print
+DeleteItem 99
+DeleteItem 5
+DeleteItem 50
+GetLength
+Print
+MakeEmpty
+IsEmpty
+MakeTree 10 10 20 30 40 50 60 70 80 90 100
+LevelOrderPrint
+PrintTree
+Error
+Quit
