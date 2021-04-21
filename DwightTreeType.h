@@ -20,7 +20,7 @@ public:
   void PutItem(ItemType item);
   void DeleteItem(ItemType item);
   void ResetTree(OrderType order); 
-  ItemType GetNextItem(OrderType order, bool& finished);
+  void GetNextItem(OrderType order, bool& finished);
   void Print() const;
   void inOrderTraverse(TreeNode* tree);
   void LevelOrderPrint();
@@ -36,7 +36,7 @@ public:
   void Retrieve(TreeNode* tree, ItemType& item, bool& found);
   void Insert(TreeNode*& tree, ItemType item);
   void Delete(TreeNode*& tree, ItemType item);
-  void PreOrder(TreeNode * tree, QueType<ItemType>* & preQue);
+  void PreOrder(TreeNode* tree, QueType<ItemType>*& preQue);
 private:
   TreeNode* root;
   QueType<ItemType> preQue;
