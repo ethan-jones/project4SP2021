@@ -34,7 +34,7 @@ public:
   std::string InOrderPrint();
   void LevelOrderPrint();
   void PrintAncestors(ItemType value);
-  void GetSuccessor(TreeNode<ItemType> * tree, ItemType& data);
+  int  GetSuccessor(int value);
   ItemType mirrorImage(TreeType& t);
 private:
   TreeNode<ItemType> * root;
