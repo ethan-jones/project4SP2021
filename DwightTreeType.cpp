@@ -144,49 +144,6 @@ void TreeType::DeleteItem(ItemType item)// Calls recursive function Delete to de
 }
 
 ////
-void Delete(TreeNode*& tree, ItemType item)// Deletes item from tree.
-// Post:  item is not in tree.
-{
-  if (item < tree->info)
-    Delete(tree->left, item);   // Look in left subtree.
-  else if (item > tree->info)
-    Delete(tree->right, item);  // Look in right subtree.
-  else
-    DeleteNode(tree);           // Node found; call DeleteNode.
-}   
-
-////
-void DeleteNode(TreeNode*& tree)
-// Deletes the node pointed to by tree.
-// Post: The user's data in the node pointed to by tree is no 
-//       longer in the tree.  If tree is a leaf node or has only 
-//       non-NULL child pointer the node pointed to by tree is 
-//       deleted; otherwise, the user's data is replaced by its 
-//       logical predecessor and the predecessor's node is deleted.
-{
-   data;
-  TreeNode* tempPtr;
-
-  tempPtr = tree;
-  if (tree->left == NULL)
-  {
-    tree = tree->right;
-    delete tempPtr;
-  }
-  else if (tree->right == NULL)
-  {
-    tree = tree->left;
-    delete tempPtr;
-  }
-  else
-  {
-    TreeNode * successor = PtrToSuccessor(tree->right);
-    tree->info = successor->info;
-    Delete(tree->right, successor->info);  // Delete predecessor node.
-  }
-}
-
-////
 void GetPredecessor(TreeNode* tree, & data)
 // Sets data to the info member of the right-most node in tree.
 {
@@ -396,7 +353,7 @@ void Level(TreeNode* tree){
 }
 
 ////
-TreeNode * PtrToSuccessor(TreeNode * tree)
+TreeNode* PtrToSuccessor(TreeNode* tree)
 // returns a pointer to a successor node
 {
   TreeNode* location = tree->left;
