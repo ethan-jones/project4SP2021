@@ -34,6 +34,9 @@ public:
   void PostOrder(TreeNode* tree, QueType<ItemType>& postQue);
   int CountNodes(TreeNode* tree);
   void Retrieve(TreeNode* tree, ItemType& item, bool& found);
+  void Insert(TreeNode*& tree, ItemType item);
+  void Delete(TreeNode*& tree, ItemType item);
+  void PreOrder(TreeNode * tree, QueType<ItemType>* & preQue)
 private:
   TreeNode* root;
   QueType<ItemType> preQue;
