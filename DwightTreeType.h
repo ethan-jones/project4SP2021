@@ -3,7 +3,6 @@
 #include "QueType.h"
 typedef int ItemType;
 struct TreeNode;
-#include "QueType.cpp"
 enum OrderType {PRE_ORDER, IN_ORDER, POST_ORDER};
 class TreeType
 {
