@@ -309,7 +309,7 @@ void PreOrderPrint()
 {
   string str = "";
   PreOrder(root, preQue);
-   item;
+  ItemType item;
   while (!preQue.IsEmpty())
   {
     preQue.Dequeue(item);
@@ -394,11 +394,10 @@ void TreeType::PrintAncestors(int value)
 }
 
 ////
-void mirrorImage(TreeType& t)
-{
-    
-  Mirror(t.root, root);
-  return t;
+void mirrorImage(TreeType& t);
+  TreeType tree; 
+  Mirror(tree.root, root);
+  return tree;
 }
 
 ////
@@ -414,7 +413,7 @@ void Mirror(TreeNode*& copy, const TreeNode* originalTree){
   }
 }
 
-void TreeType::GetSuccessor(TreeNode* tree, & data){
+void GetSuccessor(TreeNode* tree, ItemType& data){
         while(tree->left != NULL)
                 tree = tree->left;
         data= tree->info;
@@ -429,5 +428,16 @@ void PostOrder(TreeNode* tree, QueType<ItemType>& postQue)
     PostOrder(tree->right, postQue);
     postQue.Enqueue(tree->info);
   }
+}
+
+void PreOrder(TreeNode * tree, QueType<ItemType>* & preQue)
+{
+
+   if (tree != NULL)
+   {
+      preQue->push(tree->info);
+      PreOrder(tree->left, preQue);
+      PreOrder(tree->right, preQue);
+   }
 }
 
