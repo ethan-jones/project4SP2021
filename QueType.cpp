@@ -1,6 +1,7 @@
 #include <cstddef>                 // For NULL
-#include <new>                     // For bad_alloc
+#include <new>// For bad_alloc
 #include "QueType.h"
+#include <iostream>
 template <class ItemType>
 struct NodeType
 {

@@ -27,5 +27,21 @@ public:
 
 private:
   TreeNode* root;
-  
+  QueType<ItemType> preQue;
+  QueType<ItemType> inQue;
+  QueType<ItemType> postQue;
+  TreeNode* PtrToSuccessor(TreeNode* tree);
+  int CountNodes(TreeNode* tree) const;
+  void Retrieve(TreeNode* tree, ItemType& item, bool& found);
+  void Insert(TreeNode*& tree, ItemType item);
+  void DeleteNode(TreeNode*&  tree);
+  void Delete(TreeNode*& tree, ItemType item);
+  void GetPredecessor(TreeNode* tree, ItemType& data);
+  void inOrderTraverse(TreeNode* tree) const;
+  void PreOrderTraverse(TreeNode* tree) const;
+  void PostOrderTraverse(TreeNode* tree) const;
+  void Destroy(TreeNode*& tree);
+  void CopyTree(TreeNode*& copy, const TreeNode* originalTree);
+  void Level(TreeNode* tree) const;
+  void Mirror(TreeNode*& copy, const TreeNode* originalTree);
 };

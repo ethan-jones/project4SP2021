@@ -3,10 +3,10 @@
 #include <string>
 #include <cctype>
 #include <cstring>
-#include "TreeType.h"
+#include "TreeType.cpp"
 #include<iostream>
 using namespace std;
-TreeType& makeTree(int arr[], int size);
+TreeType makeTree(int arr[], int size);
 int main()
 {
   string command;        // operation to be executed
@@ -97,8 +97,8 @@ int main()
 	  else if (command == "GetSuccessor")
 	  {
 		  inFile >> item;
-		  cout << "Logical successor of"<<item<< "is:\n";
-		  tree.GetSuccessor(item);
+		  cout << "Logical successor of"<<item<< "is:";
+		  cout << tree.GetSuccessor(item) << endl;
 	  }
 	  //13
 	  else if (command == "PrintAncestorsOf")
@@ -137,9 +137,9 @@ int main()
 	    inFile >> length;
 		  for (int i = 0; i < length; i++)
 			  inFile >> array[i];
-     // After implementing makeTree
-	// Remove the follwoing comment to call the function
-	//	  TreeType balancedTree=makeTree(array, length);
+		  // After implementing makeTree
+		  // Remove the follwoing comment to call the function
+		  tree =makeTree(array, length);
 	  }
 	  else
 	  cout << "Undefined Command!" << command<<endl;
@@ -150,17 +150,29 @@ int main()
 
   return 0;
 }
+
+void addToTree(TreeType& tree, int arr[], int max, int min) {
+  int mid = (max + min) / 2;
+  bool found = false;
+  tree.GetItem(arr[mid], found); 
+  if (found) {
+  } else {
+    tree.PutItem(arr[mid]);
+    addToTree(tree, arr, max, mid);
+    addToTree(tree, arr, mid, min);
+  }
+}
+
 // implement this function
 // you may define and call helper functions.
 // The helper function could be an iterative or a recursive function.
-TreeType& makeTree(int arr[], int size)
+TreeType makeTree(int arr[], int size)
 {
-	TreeType balancedTree;
-	// Code to add array items in balancedTree
-	//Write your code
-	cout << "MakeTree has been called";
-	//remove this statement from implementation
-	return balancedTree;
+  TreeType balancedTree;
+  // Code to add array items in balancedTree
+  //Write your code
+  addToTree(balancedTree, arr, size, 0);
+  return balancedTree;
 }
 
 
